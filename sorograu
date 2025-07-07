@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sorograu SP - RP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    /* Barra fixa topo */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1f1f1f;
+      box-shadow: 0 2px 8px rgba(179, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #b30000;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+
+    .social-links a {
+      color: #eee;
+      margin-left: 1rem;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #b30000;
+    }
+
+    nav {
+      background: #1a1a1a;
+      box-shadow: inset 0 -2px 4px rgba(179, 0, 0, 0.5);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      border-bottom-color: #b30000;
+      color: #b30000;
+    }
+
+    main {
+      padding: 120px 1rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(179, 0, 0, 0.4);
+      margin-bottom: 2rem;
+      padding: 2rem;
+    }
+
+    section h2 {
+      color: #b30000;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      border-left: 5px solid #b30000;
+      padding-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #b30000;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(179, 0, 0, 0.5);
+      user-select: none;
+    }
+    .btn:hover {
+      background: #e60000;
+      box-shadow: 0 6px 12px rgba(230, 0, 0, 0.7);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(179, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    ul.staff-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.staff-list li {
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    ul.rules-list {
+      list-style-position: inside;
+      line-height: 1.4;
+    }
+    ul.rules-list li {
+      margin-bottom: 0.7rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #111;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .gallery img {
+        width: 100%;
+      }
+      .top-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .social-links a {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">Sorograu SP</div>
+      <nav class="social-links" aria-label="Redes sociais">
+        <a href="https://www.instagram.com/sorograusp/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@sorograurj" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </nav>
+    </div>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#vip">Loja VIP</a></li>
+        <li><a href="#discord">Discord</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#regras">Regras</a></li>
+        <li><a href="#recrutamento">Recrutamento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo ao Sorograu SP</h2>
+      <p>Servidor de Roleplay brasileiro com foco em diversão e realismo. Venha viver sua história em Sorograu SP!</p>
+    </section>
+
+    <section id="vip">
+      <h2>Loja VIP</h2>
+      <p>Adquira seu VIP e tenha acesso a benefícios exclusivos dentro do servidor!</p>
+      <a href="https://discord.gg/Ur73n34JcF" class="btn" target="_blank" rel="noopener noreferrer">Ir para a Loja VIP</a>
+    </section>
+
+    <section id="discord">
+      <h2>Nosso Discord</h2>
+      <p>Entre no nosso servidor do Discord para tirar dúvidas, participar de eventos e se conectar com a comunidade.</p>
+      <a href="https://discord.gg/Ur73n34JcF" class="btn" target="_blank" rel="noopener noreferrer">Entrar no Discord</a>
+    </section>
+
+    <section id="staff">
+      <h2>Staff do Servidor</h2>
+      <ul class="staff-list">
+        <li><strong>Fundador:</strong> Dichava</li>
+        <li><strong>CEO:</strong> Peixoto</li>
+      </ul>
+    </section>
+
+    <section id="regras">
+      <h2>Regras do RP</h2>
+      <ul class="rules-list">
+        <li>Proibido uso de cheats/mods.</li>
+        <li>Proibido VDM (atropelar sem motivo) e RDM (matar sem motivo).</li>
+        <li>Respeite todos os jogadores e staff.</li>
+        <li>É obrigatório interpretar seu personagem (RP).</li>
+        <li>Qualquer infração pode resultar em banimento.</li>
+      </ul>
+    </section>
+
+    <section id="recrutamento">
+      <h2>Recrutamento para Staff</h2>
+      <p>Está interessado em fazer parte da equipe do Sorograu SP? Clique no botão abaixo para acessar o formulário de recrutamento.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmWk3NqNmyDSM3eV0B6TY-3alY4uH9D5j9yt8uetmM8Ix5fA/viewform" class="btn" target="_blank" rel="noopener noreferrer">Acessar Formulário</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Sorograu SP - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
